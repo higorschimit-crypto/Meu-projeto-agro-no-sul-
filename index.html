@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
- <style>
-
-header{
-            background-color: #084916;
+    <style>
+        header{
+            background-color: #001aff;
             color: #FFFFFF;
             text-align: center;
             max-width: 800px;
@@ -16,23 +15,86 @@ header{
             padding: 16px;
 
         }
-
         main{
 
-background-color: #FFFFFF;
-color: #065f12;
-max-width: 800px;
-margin: 0 auto;
-padding: 16px;
+            background-color: #FFFFFF;
+            color: #000000;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
 
-}
+        }
 
- </style>
+        article{
+            display: flex;
+        }
 
+
+
+        img{
+         width: 500px;
+         height: 400px;
+        }
+
+        .artigo-autor{
+
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <h1>Agro no sul </h1>
-
+    <header>
+        <h1>O QUE SE PASSA NO AGRO DO SUL</h1>
+        <p>A DIFICULDADE DO AGRO NO SUL</p>
     
+    </header>
+    <main>
+        <img src="Gemini_Generated_Image_vfek45vfek45vfek.jpeg" alt="">
+        <h2>Sul sofre com fortes tempestades de granizo!!</h2>
+        <p class="artigo-autor">Por: Higor Schimit</p>
+        <p>O agronegócio na Região Sul destaca-se pela alta produtividade e forte cooperativismo, embora enfrente o desafio de alertas climáticos severos. A produção regional concentra-se na liderança de soja no Paraná, na produção de arroz no Rio Grande do Sul e na avicultura, suinocultura e fruticultura em Santa Catarina.</p>
+        
+    <button>❤️<span>0</span></button>
+    <button> 👍🏽<span>0</span></button>
+    <article>
+        <img src="Gemini_Generated_Image_fxxcq6fxxcq6fxxc.jpeg" alt="">
+
+
+     <div>
+     <h2>SUL</h2>
+
+     <p class="artigo-autor">Por: Higor Schimit</p>
+     <p>O Agro no sul, vem sendo muito dificil pois, com esse super El ninõ, está tendo muitas chuvas</p>
+
+     <button>❤️<span>0</span></button>
+    <button> 👍🏽<span>0</span></button>
+
+
+
+     </div>
+
+
+
+    </article>
+    </main>  
 </body>
+
+<script>
+    const botoes = document.querySelectorAll("button");
+    botoes.forEach(function(botao) { 
+      let curtiu = false;
+      botao.addEventListener("click", botaoClicado);
+      function botaoClicado() {
+        console.log("fui clicado");
+        let texto = botao.querySelector("span");
+        if (curtiu === false) {
+            texto.textContent++;
+            curtiu = true;
+        } else{ 
+            texto.textContent--;
+            curtiu = false;
+        }
+      }
+    })
+</script>
 </html>
